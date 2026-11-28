@@ -22,7 +22,7 @@ Object.assign(globalThis, {
     _project_: atob('VHJpZ2Vu'),
     _project_SM_: atob('dHJpZ2Vu'),
     _repo_: atob('aHR0cHM6Ly9naXRodWIuY29tL21lZWxhZG5zYWkvVHJpZ2VuLVBhbmVs'),
-    _wizard_repo_: atob('aHR0cHM6Ly9naXRodWIuY29tL21lZWxhZG5zYWkvVHJpZ2VuLVBhbmVs'),
+    _wizard_repo_: atob('aHR0cHM6Ly9naXRodWIuY29tL21lZWxhZG5zYWkvVHJpZ2VuLVdpemFyZA=='),
     _website_: atob('aHR0cHM6Ly9naXRodWIuY29tL21lZWxhZG5zYWkvVHJpZ2VuLVBhbmVs'),
     _public_proxy_ip_: atob('YnBiLnlvdXNlZi5pc2VnYXJvLmNvbQ=='),
 });

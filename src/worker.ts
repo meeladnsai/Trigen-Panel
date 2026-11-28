@@ -9,9 +9,11 @@ import { handleTelegram } from '@handlers/telegram';
 import { fallback } from '@handlers/utils';
 import { handleWebsocket } from '@handlers/websocket';
 import { init, getGlobals } from '@settings';
+import { createKvShim } from './settings/store';
 
 export default {
-	async fetch(request: Request, env: Env) {
+	async fetch(request: Request, rawEnv: Env) {
+		const env: Env = { ...rawEnv, kv: createKvShim(rawEnv.db) };
 		try {
 			init(request, env);
 			if (request.headers.get('Upgrade') === 'websocket') return handleWebsocket(request);

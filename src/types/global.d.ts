@@ -1,9 +1,15 @@
 import { EmbededSettings } from './settings';
 
 declare global {
+    interface KvShim {
+        get(key: string, options?: { type?: string }): Promise<any>;
+        put(key: string, value: string): Promise<void>;
+    }
+
     interface Env {
         readonly CF_PAGES: string;
-        readonly kv: KVNamespace;
+        readonly db: D1Database;
+        readonly kv: KvShim;
         readonly UUID?: string;
         readonly TR_PASS?: string;
     }
